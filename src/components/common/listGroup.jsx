@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const ListGroup = ({ items, onItemSelect, textProperty, valueProperty }) => {
   return (
     <ul className="list-group">
@@ -7,5 +7,10 @@ const ListGroup = ({ items, onItemSelect, textProperty, valueProperty }) => {
     </ul>
   );
 };
+
+ListGroup.defaultProps = {
+  textProperty: "name",
+  valueProperty: "_id"
+}
 
 export default ListGroup;
